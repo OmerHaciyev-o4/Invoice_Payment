@@ -7,15 +7,15 @@ namespace InvoicePayment
     public class InvoicePayment
     {
         public static bool SeriAndDesri;
-        public double PaymentDay { get; init; }                         // gunluk odenilecek mebleg
-        public int NumberDays { get; private set; } = 180;              // nece gunu var
-        public double PenaltyForOneDayPaymentDelay { get; init; }       // bir gun odenilmeyende cerimesi
-        public int AmountToPaidWithoutPenalty { get; private set; }     // nece gun odenilmeyi onun sayi
-        public int Penalty { get; private set; }                        //AmountToPaidWithoutPenalty --> qiymet neticesi   
-        public DateTime MoneyTakenTime { get; private set; }            // pulu goturduyu zaman
-        public DateTime PaymentDateTime { get; private set; }           // pulu goturduyu zaman bir gun sonrani gosterir
-        public int TotalPaymentAmount { get; private set; }             // goturduyu pul
-        public double RemainingAmount { get; private set; }             // goturduyu meblegin ne qeder qaldigini gosterir.
+        public double PaymentDay { get; init; }                         
+        public int NumberDays { get; private set; } = 180;              
+        public double PenaltyForOneDayPaymentDelay { get; init; }       
+        public int AmountToPaidWithoutPenalty { get; private set; }     
+        public int Penalty { get; private set; }                     
+        public DateTime MoneyTakenTime { get; private set; }
+        public DateTime PaymentDateTime { get; private set; }     
+        public int TotalPaymentAmount { get; private set; }       
+        public double RemainingAmount { get; private set; }          
 
 
         public InvoicePayment(int amount)
@@ -193,11 +193,8 @@ namespace InvoicePayment
             else { Console.WriteLine("Payment finish"); }
             return 0;
         }
-
-        /// <summary>
-        /// first evaluate the variable  
-        /// <param>SeriAndDesri</param>
-        /// </summary>
+        
+        
         public static void SAD(InvoicePayment obj)
         {
             if (SeriAndDesri == true)
